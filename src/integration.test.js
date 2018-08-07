@@ -33,7 +33,7 @@ describe("guessword action dispatcher", () => {
                 ...initialState,
                 success: true,
                 guessedWords: [{
-                    guessWord: secretWord,
+                    guessedWord: secretWord,
                     letterMatchCount: 5
                 }]
             };
@@ -69,7 +69,7 @@ describe("guessword action dispatcher", () => {
             const expectedState = {
                 secretWord: secretWord,
                 success: true,
-                guessedWords: [...guessedWords, { guessedWord: secretWord, leterMatchCount: 5 }]
+                guessedWords: [...guessedWords, { guessedWord: secretWord, letterMatchCount: 5 }]
             };
             expect(newState).toEqual(expectedState);
         });
